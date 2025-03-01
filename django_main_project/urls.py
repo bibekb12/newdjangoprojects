@@ -30,7 +30,6 @@ schema_view = get_schema_view(
         contact=openapi.Contact(email="brysonbhandari@gmail.com"),
     ),
     public=True,
-    permission_classes=(permissions.AllowAny),
 )
 
 urlpatterns = [
@@ -44,5 +43,5 @@ urlpatterns = [
     ),
     path("redoc/", schema_view.with_ui("redoc", cache_timeout=0), name="schema-redoc"),
     path("admin/", admin.site.urls),
-    path("employee/", include("organization1.urls")),
+    path("org/", include("organization1.urls")),
 ]

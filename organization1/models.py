@@ -33,3 +33,6 @@ class DepartmentTest(models.Model):
     )
     dep_created_at = models.DateTimeField(auto_now_add=True)
     dep_created_by = models.ForeignKey(User, on_delete=models.PROTECT)
+
+    def __str__(self):
+        return self.dep_name
